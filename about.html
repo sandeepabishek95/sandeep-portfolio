@@ -1,248 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Learn more about Sandeep Abishek, an Application Support and IT Support Engineer based in Dubai, UAE.">
-
-    <title>About Me | Sandeep Abishek</title>
-
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b12">
+  <meta name="author" content="Sandeep Abishek">
+  <meta name="description" content="About Sandeep Abishek, IT and Application Support professional with 8+ years of experience in Dubai, UAE.">
+  <title>About Me | Sandeep Abishek</title>
+  <link rel="stylesheet" href="css/style.css?v=3">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container nav-container">
+  <header class="header">
+    <div class="nav-container">
+      <a href="index.html" class="logo" aria-label="Sandeep Abishek Home">
+        SA<span>.</span>
+      </a>
 
-            <a href="index.html" class="logo">
-                SANDEEP<span>.</span>
-            </a>
+      <button class="menu-toggle" id="menuToggle"
+        type="button" aria-label="Toggle navigation"
+        aria-expanded="false" aria-controls="navigation">
+        ☰
+      </button>
 
-            <button class="menu-toggle"
-                    id="menuToggle"
-                    aria-label="Toggle navigation"
-                    aria-expanded="false">
-                ☰
-            </button>
+      <nav class="navigation" id="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="skills.html">Skills</a>
+        <a href="experience.html">Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <a href="Sandeep-Abishek-CV.pdf" class="resume-btn"
+          download="Sandeep-Abishek-CV.pdf">Download CV ↓</a>
+      </nav>
+    </div>
+  </header>
 
-            <nav class="navigation" id="navigation">
-                <a href="index.html">Home</a>
-                <a href="about.html" class="active">About</a>
-                <a href="skills.html">Skills</a>
-                <a href="experience.html">Experience</a>
-                <a href="projects.html">Projects</a>
-                <a href="contact.html">Contact</a>
-            </nav>
+  <main>
 
+    <!-- ABOUT INTRODUCTION -->
+    <section class="page-section about">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-tag">GET TO KNOW ME</span>
+          <h1>About <span>Me.</span></h1>
+          <p>My professional journey, experience and passion for technology.</p>
         </div>
-    </header>
 
+        <div class="about-grid">
 
-    <!-- ABOUT HERO -->
-    <main>
+          <div class="about-image">
+            <img src="assets/images/profile-portrait.jpg"
+              alt="Portrait of Sandeep Abishek"
+              loading="lazy">
+          </div>
 
-        <section class="page-section about">
-            <div class="container">
+          <div class="about-content">
+            <span class="section-tag">APPLICATION SUPPORT ENGINEER</span>
 
-                <div class="section-heading">
-                    <span class="section-tag">GET TO KNOW ME</span>
-                    <h1>About <span>Me.</span></h1>
-                    <p>
-                        A little about my professional journey,
-                        experience and passion for technology.
-                    </p>
-                </div>
+            <h2>Hello, I'm Sandeep Abishek</h2>
 
-
-                <!-- ABOUT CONTENT -->
-                <div class="about-grid">
-
-                    <div class="about-image">
-                        <img
-                            src="assets/images/profile-portrait.jpg"
-                            alt="Portrait of Sandeep Abishek"
-                            loading="lazy">
-                    </div>
-
-
-                    <div class="about-content">
-
-                        <span class="section-tag">
-                            APPLICATION SUPPORT ENGINEER
-                        </span>
-
-                        <h2>
-                            Hello, I'm Sandeep Abishek
-                        </h2>
-
-                        <p>
-                            I am an IT and Application Support
-                            professional with over 8 years of
-                            experience supporting enterprise
-                            applications, business-critical systems
-                            and end-user environments.
-                        </p>
-
-                        <p>
-                            Throughout my career, I have worked
-                            across application support, production
-                            support, incident management and
-                            technical troubleshooting. I enjoy
-                            identifying the root cause of problems
-                            and delivering reliable solutions that
-                            keep business operations running.
-                        </p>
-
-                        <p>
-                            My experience includes working with
-                            Microsoft Azure, Active Directory,
-                            Microsoft 365, SQL Server, Salesforce,
-                            ServiceNow, Jira and Windows
-                            environments.
-                        </p>
-
-                        <p>
-                            I believe effective IT support is not
-                            just about resolving tickets. It is
-                            about understanding business impact,
-                            communicating clearly and preventing
-                            recurring issues.
-                        </p>
-
-                        <div class="about-details">
-
-                            <div>
-                                <span>Location</span>
-                                <strong>Dubai, UAE</strong>
-                            </div>
-
-                            <div>
-                                <span>Experience</span>
-                                <strong>8+ Years</strong>
-                            </div>
-
-                            <div>
-                                <span>Specialisation</span>
-                                <strong>IT & Application Support</strong>
-                            </div>
-
-                            <div>
-                                <span>Career Focus</span>
-                                <strong>Production Support</strong>
-                            </div>
-
-                        </div>
-
-                        <a href="experience.html" class="btn btn-primary">
-                            Explore My Experience
-                        </a>
-
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- PROFESSIONAL HIGHLIGHTS -->
-        <section class="page-section">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-tag">MY PROFESSIONAL IMPACT</span>
-                    <h2>Experience That <span>Matters.</span></h2>
-                </div>
-
-                <div class="stats-grid">
-
-                    <div class="stat-card">
-                        <h3>8+</h3>
-                        <p>Years of Experience</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>500+</h3>
-                        <p>Monthly Salesforce Tickets</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>200+</h3>
-                        <p>Enterprise Users Supported</p>
-                    </div>
-
-                    <div class="stat-card">
-                        <h3>99.9%</h3>
-                        <p>Service Continuity</p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-
-        <!-- PROFESSIONAL APPROACH -->
-        <section class="page-section">
-            <div class="container">
-
-                <div class="section-heading">
-                    <span class="section-tag">HOW I WORK</span>
-                    <h2>My Professional <span>Approach.</span></h2>
-                </div>
-
-                <div class="cards-grid">
-
-                    <div class="info-card">
-                        <h3>Problem Solving</h3>
-                        <p>
-                            Investigating technical issues,
-                            identifying root causes and delivering
-                            practical solutions.
-                        </p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Service Reliability</h3>
-                        <p>
-                            Maintaining application availability,
-                            monitoring incidents and supporting
-                            business continuity.
-                        </p>
-                    </div>
-
-                    <div class="info-card">
-                        <h3>Continuous Improvement</h3>
-                        <p>
-                            Reducing recurring incidents through
-                            documentation, preventive actions
-                            and permanent fixes.
-                        </p>
-                    </div>
-
-                </div>
-
-            </div>
-        </section>
-
-    </main>
-
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
             <p>
-                © <span id="currentYear"></span>
-                Sandeep Abishek. All rights reserved.
+              I am an IT and Application Support professional with
+              over 8 years of experience supporting enterprise
+              applications, business-critical systems and
+              end-user environments.
             </p>
+
+            <p>
+              Throughout my career, I have worked across application
+              support, production support, incident management and
+              technical troubleshooting. I enjoy identifying root
+              causes and delivering reliable solutions that keep
+              business operations running.
+            </p>
+
+            <p>
+              My technical experience includes Microsoft Azure,
+              Active Directory, Microsoft 365, SQL Server,
+              Salesforce, ServiceNow, Jira and Windows environments.
+            </p>
+
+            <p>
+              I believe effective IT support is not just about
+              resolving tickets. It is about understanding business
+              impact, communicating clearly and preventing
+              recurring issues.
+            </p>
+
+            <div class="about-details">
+              <div>
+                <span>Location</span>
+                <strong>Dubai, UAE</strong>
+              </div>
+
+              <div>
+                <span>Experience</span>
+                <strong>8+ Years</strong>
+              </div>
+
+              <div>
+                <span>Specialisation</span>
+                <strong>IT &amp; Application Support</strong>
+              </div>
+
+              <div>
+                <span>Career Focus</span>
+                <strong>Production Support</strong>
+              </div>
+            </div>
+
+            <a href="experience.html" class="btn btn-primary">
+              Explore My Experience →
+            </a>
+          </div>
+
         </div>
-    </footer>
+      </div>
+    </section>
 
+    <!-- PROFESSIONAL STATISTICS -->
+    <section class="page-section compact-section">
+      <div class="container">
 
-    <script src="js/script.js"></script>
+        <div class="section-heading">
+          <span class="section-tag">MY PROFESSIONAL IMPACT</span>
+          <h2>Experience That <span>Matters.</span></h2>
+        </div>
 
+        <div class="stats-grid">
+          <div class="stat-card">
+            <h3>8+</h3>
+            <p>Years of Experience</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>500+</h3>
+            <p>Monthly Salesforce Tickets</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>200+</h3>
+            <p>Enterprise Users Supported</p>
+          </div>
+
+          <div class="stat-card">
+            <h3>99.9%</h3>
+            <p>Service Continuity</p>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PROFESSIONAL APPROACH -->
+    <section class="page-section compact-section">
+      <div class="container">
+
+        <div class="section-heading">
+          <span class="section-tag">HOW I WORK</span>
+          <h2>My Professional <span>Approach.</span></h2>
+        </div>
+
+        <div class="cards-grid">
+
+          <div class="info-card">
+            <h3>Problem Solving</h3>
+            <p>
+              Investigating technical issues, identifying root
+              causes and delivering practical solutions.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Service Reliability</h3>
+            <p>
+              Maintaining application availability, monitoring
+              incidents and supporting business continuity.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <h3>Continuous Improvement</h3>
+            <p>
+              Reducing recurring incidents through documentation,
+              preventive actions and permanent fixes.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        © <span id="currentYear">2026</span>
+        Sandeep Abishek. All rights reserved.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
 </body>
 </html>
