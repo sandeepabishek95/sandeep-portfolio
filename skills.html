@@ -4,178 +4,286 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#080b12">
-    <title>Skills | Sandeep Abishek</title>
-    <meta name="description" content="Technical skills and expertise of Sandeep Abishek, IT and Application Support Engineer in Dubai.">
+    <title>Technical Skills | Sandeep Abishek</title>
+    <meta name="description"
+        content="Explore the technical skills of Sandeep Abishek, an IT and Application Support Engineer with 8+ years of experience.">
     <link rel="stylesheet" href="css/style.css?v=3">
+    <style>
+        /* Skills page layout */
+        #skillsPage .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(6, minmax(0, 1fr));
+            gap: 24px;
+        }
+        #skillsPage .skill-card {
+            grid-column: span 2;
+            padding: 24px;
+        }
+        #skillsPage .skill-card:nth-child(4),
+        #skillsPage .skill-card:nth-child(5) {
+            grid-column: span 3;
+        }
+        #skillsPage .skill-card:nth-child(6) {
+            grid-column: span 6;
+        }
+        #skillsPage .skill-card h3 {
+            margin-bottom: 14px;
+        }
+        #skillsPage .skill-card p {
+            margin-bottom: 18px;
+            line-height: 1.7;
+        }
+        /* Gold bullet points */
+        #skillsPage .skill-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        #skillsPage .skill-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 9px;
+            line-height: 1.5;
+            color: var(--white);
+        }
+        #skillsPage .skill-list li::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 9px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: var(--gold);
+        }
+        #skillsPage .skill-icon {
+            margin-bottom: 12px;
+        }
+        #skillsPage .beyond-section {
+            margin-top: 45px;
+        }
+        #skillsPage .beyond-section .cards-grid {
+            gap: 20px;
+        }
+        #skillsPage .beyond-section .card h3 {
+            color: var(--gold);
+        }
+        @media (max-width: 950px) {
+            #skillsPage .skills-grid {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+            #skillsPage .skill-card,
+            #skillsPage .skill-card:nth-child(4),
+            #skillsPage .skill-card:nth-child(5),
+            #skillsPage .skill-card:nth-child(6) {
+                grid-column: span 1;
+            }
+        }
+        @media (max-width: 650px) {
+            #skillsPage .skills-grid {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+            #skillsPage .skill-card,
+            #skillsPage .skill-card:nth-child(4),
+            #skillsPage .skill-card:nth-child(5),
+            #skillsPage .skill-card:nth-child(6) {
+                grid-column: span 1;
+                padding: 22px;
+            }
+            #skillsPage .beyond-section {
+                margin-top: 30px;
+            }
+        }
+    </style>
 </head>
 <body>
-<header class="header">
-    <div class="nav-container">
-        <a href="index.html" class="logo">SA<span>.</span></a>
-        <button class="menu-toggle" id="menuToggle"
-            aria-label="Toggle navigation"
-            aria-expanded="false">☰</button>
-        <nav class="navigation" id="navigation">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="skills.html" class="active">Skills</a>
-            <a href="experience.html">Experience</a>
-            <a href="projects.html">Projects</a>
-            <a href="contact.html">Contact</a>
-            <a href="Sandeep-Abishek-CV.pdf" class="resume-btn" download>
-                Download CV ↓
-            </a>
-        </nav>
-    </div>
-</header>
-<main>
-    <section class="page-section">
-        <div class="section-heading">
-            <span class="section-tag">MY EXPERTISE</span>
-            <h1>Technical <span>Skills</span></h1>
-            <p class="section-description">
-                A combination of technical expertise, enterprise application
-                support, infrastructure management, and problem-solving skills
-                developed through 8+ years of IT experience.
-            </p>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SA<span>.</span></a>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+            <nav class="navigation" id="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html" class="active">Skills</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+                <a href="Sandeep-Abishek-CV.pdf"
+                    class="resume-btn" download>
+                    Download CV ↓
+                </a>
+            </nav>
         </div>
-        <div class="skills-grid">
-            <div class="skill-card card">
-                <div class="skill-icon">01</div>
-                <h3>Application & Production Support</h3>
-                <p>
-                    Supporting business-critical applications and maintaining
-                    reliable production environments.
+    </header>
+    <main id="skillsPage">
+        <!-- Technical Skills -->
+        <section class="page-section">
+            <div class="section-heading">
+                <span class="section-tag">MY EXPERTISE</span>
+                <h1>Technical <span>Skills</span></h1>
+                <p class="section-description">
+                    A combination of technical expertise, enterprise
+                    application support, infrastructure management, and
+                    problem-solving skills developed through 8+ years
+                    of IT experience.
                 </p>
-                <div class="skill-tags">
-                    <span>Application Support</span>
-                    <span>L1 / L2 / L3 Support</span>
-                    <span>Production Monitoring</span>
-                    <span>Incident Management</span>
-                    <span>RCA</span>
-                    <span>SLA Management</span>
+            </div>
+            <div class="skills-grid">
+                <!-- 01 Application Support -->
+                <div class="skill-card card">
+                    <div class="skill-icon">01</div>
+                    <h3>Application & Production Support</h3>
+                    <p>
+                        Supporting business-critical applications and
+                        maintaining reliable production environments.
+                    </p>
+                    <ul class="skill-list">
+                        <li>Application Support</li>
+                        <li>L1 / L2 / L3 Support</li>
+                        <li>Production Monitoring</li>
+                        <li>Incident Management</li>
+                        <li>RCA (Root Cause Analysis)</li>
+                        <li>SLA Management</li>
+                    </ul>
+                </div>
+                <!-- 02 Cloud and Infrastructure -->
+                <div class="skill-card card">
+                    <div class="skill-icon">02</div>
+                    <h3>Cloud & Infrastructure</h3>
+                    <p>
+                        Working with enterprise infrastructure, cloud
+                        environments, user access, and Windows-based systems.
+                    </p>
+                    <ul class="skill-list">
+                        <li>Microsoft Azure</li>
+                        <li>Active Directory (AD)</li>
+                        <li>Windows Support</li>
+                        <li>Microsoft 365</li>
+                        <li>Exchange Online</li>
+                        <li>SharePoint</li>
+                    </ul>
+                </div>
+                <!-- 03 Database and Application Tools -->
+                <div class="skill-card card">
+                    <div class="skill-icon">03</div>
+                    <h3>Database & Application Tools</h3>
+                    <p>
+                        Supporting enterprise applications and working
+                        with databases, application logs, and technical
+                        troubleshooting tools.
+                    </p>
+                    <ul class="skill-list">
+                        <li>MS SQL Server</li>
+                        <li>Application Logs</li>
+                        <li>Log Analysis</li>
+                        <li>API Analysis</li>
+                        <li>Database Troubleshooting</li>
+                    </ul>
+                </div>
+                <!-- 04 Ticketing Platforms -->
+                <div class="skill-card card">
+                    <div class="skill-icon">04</div>
+                    <h3>Ticketing & Service Management Platforms</h3>
+                    <p>
+                        Using ticketing and service management platforms
+                        to manage incidents, service requests, escalations,
+                        and support workflows.
+                    </p>
+                    <ul class="skill-list">
+                        <li>Jira</li>
+                        <li>Salesforce</li>
+                        <li>Freshdesk</li>
+                        <li>ServiceNow</li>
+                        <li>Ticket Management</li>
+                        <li>Escalation Tracking</li>
+                    </ul>
+                </div>
+                <!-- 05 Networking and End User Support -->
+                <div class="skill-card card">
+                    <div class="skill-icon">05</div>
+                    <h3>Networking & End-User Support</h3>
+                    <p>
+                        Troubleshooting connectivity, endpoint, and
+                        workplace technology issues for enterprise users.
+                    </p>
+                    <ul class="skill-list">
+                        <li>LAN / WAN</li>
+                        <li>Wi-Fi Troubleshooting</li>
+                        <li>VPN Support</li>
+                        <li>Printer Support</li>
+                        <li>Windows Troubleshooting</li>
+                        <li>Remote Support (RDP / Teams)</li>
+                    </ul>
+                </div>
+                <!-- 06 Monitoring and Operations -->
+                <div class="skill-card card">
+                    <div class="skill-icon">06</div>
+                    <h3>Monitoring & Operational Excellence</h3>
+                    <p>
+                        Proactive monitoring, recurring issue analysis,
+                        and continuous improvement of IT services.
+                    </p>
+                    <ul class="skill-list">
+                        <li>Proactive Monitoring</li>
+                        <li>PA Monitor</li>
+                        <li>Preventive Maintenance</li>
+                        <li>Runbooks & SOPs</li>
+                        <li>Service Reliability</li>
+                        <li>Continuous Improvement</li>
+                    </ul>
                 </div>
             </div>
-            <div class="skill-card card">
-                <div class="skill-icon">02</div>
-                <h3>Cloud & Infrastructure</h3>
-                <p>
-                    Working with enterprise infrastructure, cloud environments,
-                    user access, and Windows-based systems.
-                </p>
-                <div class="skill-tags">
-                    <span>Microsoft Azure</span>
-                    <span>Active Directory</span>
-                    <span>Windows Support</span>
-                    <span>Microsoft 365</span>
-                    <span>Exchange Online</span>
-                    <span>SharePoint</span>
+            <!-- Beyond Technology -->
+            <div class="beyond-section">
+                <div class="section-heading">
+                    <span class="section-tag">HOW I WORK</span>
+                    <h2>Beyond <span>Technology</span></h2>
+                    <p class="section-description">
+                        Effective IT support requires more than technical
+                        knowledge. It requires ownership, clear communication,
+                        and a customer-focused approach.
+                    </p>
+                </div>
+                <div class="cards-grid">
+                    <div class="card">
+                        <h3>Problem Solving</h3>
+                        <p>
+                            Identifying root causes, analysing technical
+                            issues, and delivering practical solutions.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Communication</h3>
+                        <p>
+                            Coordinating with users, stakeholders, and
+                            technical teams to resolve issues effectively.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3>Ownership & Reliability</h3>
+                        <p>
+                            Taking responsibility for incidents, following
+                            through on escalations, and maintaining
+                            service commitments.
+                        </p>
+                    </div>
                 </div>
             </div>
-            <div class="skill-card card">
-                <div class="skill-icon">03</div>
-                <h3>Database & Application Tools</h3>
-                <p>
-                    Supporting enterprise applications and working with
-                    databases, service platforms, and operational tools.
-                </p>
-                <div class="skill-tags">
-                    <span>MS SQL Server</span>
-                    <span>Salesforce</span>
-                    <span>ServiceNow</span>
-                    <span>Jira</span>
-                    <span>Application Logs</span>
-                    <span>API Analysis</span>
-                </div>
-            </div>
-            <div class="skill-card card">
-                <div class="skill-icon">04</div>
-                <h3>Networking & End-User Support</h3>
-                <p>
-                    Troubleshooting connectivity, endpoint, and workplace
-                    technology issues for enterprise users.
-                </p>
-                <div class="skill-tags">
-                    <span>LAN / WAN</span>
-                    <span>Wi-Fi Troubleshooting</span>
-                    <span>VPN Support</span>
-                    <span>Printer Support</span>
-                    <span>Windows Troubleshooting</span>
-                    <span>Remote Support</span>
-                </div>
-            </div>
-            <div class="skill-card card">
-                <div class="skill-icon">05</div>
-                <h3>IT Service Management</h3>
-                <p>
-                    Managing support operations, service requests, escalations,
-                    and service reliability.
-                </p>
-                <div class="skill-tags">
-                    <span>Ticket Governance</span>
-                    <span>Incident Management</span>
-                    <span>Problem Management</span>
-                    <span>Change Management</span>
-                    <span>Escalation Management</span>
-                    <span>Documentation</span>
-                </div>
-            </div>
-            <div class="skill-card card">
-                <div class="skill-icon">06</div>
-                <h3>Monitoring & Operational Excellence</h3>
-                <p>
-                    Proactive monitoring, recurring issue analysis, and
-                    continuous improvement of IT services.
-                </p>
-                <div class="skill-tags">
-                    <span>Proactive Monitoring</span>
-                    <span>PA Monitor</span>
-                    <span>Preventive Maintenance</span>
-                    <span>Runbooks</span>
-                    <span>Service Reliability</span>
-                    <span>Knowledge Management</span>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="page-section">
-        <div class="section-heading">
-            <span class="section-tag">HOW I WORK</span>
-            <h2>Beyond <span>Technology</span></h2>
-            <p class="section-description">
-                Effective IT support requires more than technical knowledge.
-                It requires ownership, communication, and a customer-focused
-                approach.
-            </p>
-        </div>
-        <div class="cards-grid">
-            <div class="card">
-                <h3>Problem Solving</h3>
-                <p>
-                    Identifying root causes, analysing technical issues,
-                    and delivering practical solutions.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Communication</h3>
-                <p>
-                    Coordinating with users, stakeholders, and technical
-                    teams to resolve issues effectively.
-                </p>
-            </div>
-            <div class="card">
-                <h3>Ownership & Reliability</h3>
-                <p>
-                    Taking responsibility for incidents, following through
-                    on escalations, and maintaining service commitments.
-                </p>
-            </div>
-        </div>
-    </section>
-</main>
-<footer class="footer">
-    <p>© <span id="currentYear"></span> Sandeep Abishek. All rights reserved.</p>
-</footer>
-<script src="js/script.js"></script>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            © <span id="currentYear"></span>
+            Sandeep Abishek. All rights reserved.
+        </p>
+    </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
