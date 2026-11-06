@@ -1,10 +1,7 @@
 /* ==================================================
    SANDEEP ABISHEK - PREMIUM PORTFOLIO
-   Theme: OBSIDIAN / MIDNIGHT / CHAMPAGNE
-   Responsive: iOS / Android / Tablet / Windows / Mac
+   OBSIDIAN / MIDNIGHT / CHAMPAGNE
    ================================================== */
-
-/* 1. GLOBAL SETTINGS */
 
 :root {
   --bg: #080b12;
@@ -57,14 +54,12 @@ img {
   margin: 0 auto;
 }
 
-/* 2. HEADER AND NAVIGATION */
+/* HEADER */
 
 .header {
   width: 100%;
-  min-height: 76px;
+  min-height: 72px;
   padding: 12px 6%;
-  display: flex;
-  align-items: center;
   background: rgba(8, 11, 18, 0.96);
   border-bottom: 1px solid var(--border);
   position: sticky;
@@ -75,6 +70,10 @@ img {
 }
 
 .nav-container {
+  width: 100%;
+  max-width: 1200px;
+  min-height: 48px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -92,19 +91,19 @@ img {
 .logo span {
   color: var(--white);
   font-size: 15px;
-  margin-left: 8px;
+  margin-left: 5px;
 }
 
 .navigation {
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 22px;
 }
 
 .navigation a {
-  font-size: 13px;
   color: var(--muted);
-  transition: 0.3s ease;
+  font-size: 13px;
+  transition: color 0.25s ease;
 }
 
 .navigation a:hover,
@@ -114,14 +113,14 @@ img {
 
 .navigation a.active {
   border-bottom: 2px solid var(--gold);
-  padding-bottom: 7px;
+  padding-bottom: 6px;
 }
 
 .navigation .resume-btn {
   border: 1px solid var(--gold);
-  padding: 9px 16px;
-  border-radius: 30px;
   color: var(--gold);
+  padding: 9px 15px;
+  border-radius: 30px;
 }
 
 .navigation .resume-btn:hover {
@@ -135,21 +134,20 @@ img {
   color: var(--white);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 8px 12px;
+  padding: 7px 12px;
   font-size: 22px;
   cursor: pointer;
 }
 
-/* 3. HOME HERO */
+/* HOME HERO */
 
 .hero {
-  min-height: 620px;
-  padding: 75px 7%;
+  min-height: 580px;
+  padding: 65px 7%;
   display: grid;
   grid-template-columns: 1.2fr 0.8fr;
   align-items: center;
-  gap: 45px;
-  position: relative;
+  gap: 40px;
   overflow: hidden;
   background:
     radial-gradient(
@@ -168,9 +166,9 @@ img {
 .eyebrow {
   color: var(--gold);
   font-size: 12px;
-  letter-spacing: 3px;
+  letter-spacing: 2px;
   font-weight: 700;
-  margin-bottom: 22px;
+  margin-bottom: 18px;
 }
 
 .hero h1 {
@@ -194,8 +192,8 @@ img {
 .hero-description {
   max-width: 560px;
   color: var(--muted);
-  font-size: 16px;
-  margin-bottom: 20px;
+  font-size: 15px;
+  margin-bottom: 18px;
 }
 
 .location {
@@ -207,14 +205,14 @@ img {
 .availability {
   color: #59d99b;
   font-size: 14px;
-  margin-bottom: 25px;
+  margin-bottom: 20px;
 }
 
 .hero-actions {
   display: flex;
   flex-wrap: wrap;
-  gap: 14px;
-  margin-top: 25px;
+  gap: 12px;
+  margin-top: 22px;
 }
 
 .primary-btn,
@@ -223,9 +221,9 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 13px 23px;
+  padding: 13px 21px;
   border-radius: 30px;
-  font-size: 14px;
+  font-size: 13px;
   font-weight: 700;
   transition: 0.3s ease;
 }
@@ -248,7 +246,7 @@ img {
   box-shadow: 0 8px 25px rgba(232, 197, 138, 0.2);
 }
 
-/* 4. PROFILE PHOTOGRAPH */
+/* PROFILE IMAGE */
 
 .hero-image {
   display: flex;
@@ -260,22 +258,22 @@ img {
 .hero-image img {
   width: 100%;
   max-width: 430px;
-  max-height: 540px;
+  max-height: 520px;
   object-fit: contain;
   object-position: center bottom;
-  filter: drop-shadow(0 15px 35px rgba(0, 132, 255, 0.2));
   border-radius: 10px;
+  filter: drop-shadow(0 15px 35px rgba(0, 132, 255, 0.2));
 }
 
-/* 5. HOME STATISTICS */
+/* HOME STATISTICS */
 
 .statistics {
   max-width: 1200px;
-  margin: -10px auto 55px;
-  padding: 25px;
+  margin: -10px auto 35px;
+  padding: 24px;
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 18px;
   background: linear-gradient(120deg, #111d2b, #0c131e);
   border: 1px solid var(--border);
   border-radius: 16px;
@@ -284,14 +282,14 @@ img {
 }
 
 .stat {
-  text-align: center;
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .stat strong {
-  font-size: 29px;
   color: var(--gold);
+  font-size: 29px;
   font-weight: 800;
 }
 
@@ -300,17 +298,21 @@ img {
   font-size: 12px;
 }
 
-/* 6. COMMON PAGE SECTIONS */
+/* COMMON PAGE SECTIONS */
 
 .page-section {
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 65px 6%;
+  padding: 45px 6%;
+}
+
+.page-section + .page-section {
+  padding-top: 25px;
 }
 
 .section-heading {
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .section-tag {
@@ -319,44 +321,34 @@ img {
   font-size: 11px;
   font-weight: 700;
   letter-spacing: 2px;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section-heading h1,
 .section-heading h2 {
-  font-size: clamp(30px, 4vw, 44px);
+  font-size: clamp(29px, 4vw, 44px);
   line-height: 1.2;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .section-heading h1 span,
-.section-heading h2 span {
+.section-heading h2 span,
+.page-heading span {
   color: var(--gold);
 }
 
 .section-heading p {
   color: var(--muted);
   max-width: 650px;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-.page-heading {
-  font-size: clamp(32px, 4vw, 48px);
-  margin-bottom: 12px;
-  line-height: 1.2;
+.compact-section {
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 
-.page-heading span {
-  color: var(--gold);
-}
-
-.section-description {
-  color: var(--muted);
-  max-width: 650px;
-  margin-bottom: 30px;
-}
-
-/* 7. GENERAL CARDS */
+/* GENERAL CARDS */
 
 .card,
 .info-card,
@@ -364,8 +356,11 @@ img {
   background: linear-gradient(145deg, #142131, #0d141e);
   border: 1px solid rgba(75, 160, 220, 0.25);
   border-radius: 14px;
-  padding: 23px;
   transition: 0.3s ease;
+}
+
+.card {
+  padding: 24px;
 }
 
 .card:hover,
@@ -376,13 +371,13 @@ img {
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
-/* 8. ABOUT PAGE */
+/* ABOUT PAGE */
 
 .about-grid {
   display: grid;
   grid-template-columns: 0.8fr 1.2fr;
   align-items: center;
-  gap: 38px;
+  gap: 35px;
 }
 
 .about-image {
@@ -394,7 +389,7 @@ img {
 .about-image img {
   width: 100%;
   max-width: 380px;
-  max-height: 500px;
+  max-height: 480px;
   object-fit: cover;
   object-position: center;
   border: 1px solid var(--gold);
@@ -404,29 +399,29 @@ img {
 
 .about-content h2 {
   font-size: clamp(24px, 3vw, 34px);
-  margin: 8px 0 16px;
+  margin: 8px 0 14px;
 }
 
 .about-content p {
   color: var(--muted);
   font-size: 14px;
-  line-height: 1.8;
-  margin: 12px 0;
+  line-height: 1.75;
+  margin: 10px 0;
 }
 
 .about-details {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 13px;
-  margin: 22px 0;
+  gap: 12px;
+  margin: 18px 0;
 }
 
 .about-details div {
-  padding: 13px;
+  min-width: 0;
+  padding: 12px;
   background: rgba(17, 28, 42, 0.8);
   border: 1px solid var(--border);
   border-radius: 10px;
-  min-width: 0;
 }
 
 .about-details span {
@@ -443,29 +438,22 @@ img {
   overflow-wrap: anywhere;
 }
 
-.about-highlights {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 15px;
-  margin-top: 25px;
-}
-
-/* 9. ABOUT PAGE STATISTICS */
+/* ABOUT STATISTICS */
 
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
+  gap: 15px;
 }
 
 .stat-card {
   text-align: center;
-  padding: 24px 15px;
+  padding: 22px 12px;
 }
 
 .stat-card h3 {
   color: var(--gold);
-  font-size: clamp(24px, 3vw, 34px);
+  font-size: 30px;
   margin-bottom: 5px;
 }
 
@@ -475,18 +463,22 @@ img {
   line-height: 1.5;
 }
 
-/* 10. PROFESSIONAL APPROACH CARDS */
+/* PROFESSIONAL APPROACH */
 
 .cards-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 18px;
+  gap: 16px;
+}
+
+.info-card {
+  padding: 22px;
 }
 
 .info-card h3 {
   color: var(--gold);
   font-size: 17px;
-  margin-bottom: 9px;
+  margin-bottom: 8px;
 }
 
 .info-card p {
@@ -495,12 +487,12 @@ img {
   line-height: 1.7;
 }
 
-/* 11. SKILLS PAGE */
+/* SKILLS PAGE */
 
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
 }
 
 .skill-card h3 {
@@ -519,7 +511,7 @@ img {
   color: var(--blue);
 }
 
-/* 12. EXPERIENCE TIMELINE */
+/* EXPERIENCE TIMELINE */
 
 .timeline {
   position: relative;
@@ -566,12 +558,12 @@ img {
   font-size: 14px;
 }
 
-/* 13. PROJECTS PAGE */
+/* PROJECTS PAGE */
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 22px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
 }
 
 .project-card h3 {
@@ -584,7 +576,7 @@ img {
   font-size: 14px;
 }
 
-/* 14. CONTACT PAGE */
+/* CONTACT PAGE */
 
 .contact-grid {
   display: grid;
@@ -605,7 +597,7 @@ img {
 .contact-form {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 14px;
 }
 
 .contact-form input,
@@ -620,7 +612,7 @@ img {
 }
 
 .contact-form textarea {
-  min-height: 150px;
+  min-height: 140px;
   resize: vertical;
 }
 
@@ -629,24 +621,25 @@ img {
   cursor: pointer;
 }
 
-/* 15. FOOTER */
+/* FOOTER */
 
 footer,
 .footer {
   text-align: center;
-  padding: 23px 15px;
+  padding: 20px 15px;
   border-top: 1px solid var(--border);
   color: var(--muted);
-  font-size: 13px;
+  font-size: 12px;
 }
 
-/* 16. ANIMATIONS */
+/* ANIMATIONS */
 
 @keyframes fadeUp {
   from {
     opacity: 0;
-    transform: translateY(20px);
+    transform: translateY(15px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -655,7 +648,7 @@ footer,
 
 .hero-content,
 .hero-image {
-  animation: fadeUp 0.8s ease both;
+  animation: fadeUp 0.7s ease both;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -669,12 +662,12 @@ footer,
   }
 }
 
-/* 17. TABLET RESPONSIVENESS */
+/* TABLET */
 
 @media (min-width: 651px) and (max-width: 950px) {
-
   .header {
-    padding: 12px 4%;
+    padding-left: 4%;
+    padding-right: 4%;
   }
 
   .navigation {
@@ -682,41 +675,46 @@ footer,
   }
 
   .navigation a {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .hero {
-    padding: 55px 5%;
+    padding: 50px 5%;
     gap: 20px;
   }
 
   .about-grid {
-    gap: 25px;
+    gap: 24px;
   }
 
   .skills-grid,
   .cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   .statistics {
-    margin: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
   }
 }
 
-/* 18. MOBILE RESPONSIVENESS */
+/* MOBILE */
 
 @media (max-width: 650px) {
 
-  /* Header */
+  /* Header: logo and menu stay on one row */
 
   .header {
     min-height: 66px;
-    padding: 10px 5%;
+    padding: 9px 5%;
+  }
+
+  .nav-container {
+    min-height: 46px;
   }
 
   .logo {
-    font-size: 22px;
+    font-size: 23px;
   }
 
   .logo span {
@@ -725,6 +723,7 @@ footer,
 
   .menu-toggle {
     display: block;
+    flex-shrink: 0;
   }
 
   .navigation {
@@ -733,12 +732,12 @@ footer,
     top: 100%;
     left: 0;
     width: 100%;
-    padding: 16px 6% 22px;
+    padding: 14px 6% 20px;
     background: #0c131e;
     border-bottom: 1px solid var(--border);
     flex-direction: column;
     align-items: stretch;
-    gap: 10px;
+    gap: 8px;
   }
 
   .navigation.open {
@@ -746,6 +745,7 @@ footer,
   }
 
   .navigation a {
+    display: block;
     font-size: 14px;
     padding: 8px;
   }
@@ -754,19 +754,18 @@ footer,
     text-align: center;
   }
 
-  /* Home hero */
+  /* Home */
 
   .hero {
     min-height: auto;
     grid-template-columns: 1fr;
-    padding: 42px 6% 30px;
-    gap: 25px;
-    text-align: left;
+    padding: 38px 6% 28px;
+    gap: 22px;
   }
 
   .hero h1 {
-    font-size: 39px;
-    letter-spacing: -1.3px;
+    font-size: clamp(34px, 9vw, 40px);
+    letter-spacing: -1px;
   }
 
   .hero-description {
@@ -774,8 +773,8 @@ footer,
   }
 
   .hero-image img {
-    max-width: 320px;
-    max-height: 400px;
+    max-width: 300px;
+    max-height: 380px;
   }
 
   .hero-actions {
@@ -785,91 +784,110 @@ footer,
   .primary-btn,
   .secondary-btn,
   .btn {
-    padding: 12px 17px;
+    padding: 11px 16px;
     font-size: 12px;
   }
 
-  /* Home statistics */
-
   .statistics {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 16px;
-    margin: 12px 15px 25px;
-    padding: 18px 10px;
+    gap: 14px;
+    margin: 12px 14px 22px;
+    padding: 17px 10px;
   }
 
   .stat strong {
-    font-size: 25px;
+    font-size: 24px;
   }
 
-  /* Common page sections */
+  .stat span {
+    font-size: 11px;
+  }
+
+  /* Page sections: no artificial full-screen heights */
 
   .page-section {
-    padding: 32px 6%;
+    padding: 25px 6%;
+  }
+
+  .page-section + .page-section {
+    padding-top: 14px;
+  }
+
+  .compact-section {
+    padding-top: 14px;
+    padding-bottom: 18px;
   }
 
   .section-heading {
-    margin-bottom: 20px;
+    margin-bottom: 16px;
+  }
+
+  .section-tag {
+    font-size: 10px;
+    margin-bottom: 6px;
   }
 
   .section-heading h1,
   .section-heading h2 {
-    font-size: 29px;
-    margin-bottom: 8px;
+    font-size: 28px;
+    margin-bottom: 6px;
   }
 
   .section-heading p {
     font-size: 13px;
   }
 
-  /* About page */
+  /* About */
 
   .about-grid {
     grid-template-columns: 1fr;
-    gap: 20px;
+    gap: 17px;
   }
 
   .about-image img {
-    width: 100%;
-    max-width: 270px;
-    max-height: 330px;
+    max-width: 245px;
+    max-height: 300px;
     margin: 0 auto;
   }
 
   .about-content h2 {
-    font-size: 25px;
-    margin: 7px 0 12px;
+    font-size: 24px;
+    margin: 6px 0 10px;
   }
 
   .about-content p {
     font-size: 13px;
     line-height: 1.65;
-    margin: 9px 0;
+    margin: 8px 0;
   }
 
   .about-details {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-    margin: 16px 0;
+    gap: 9px;
+    margin: 14px 0;
   }
 
   .about-details div {
-    padding: 11px;
+    padding: 10px;
+  }
+
+  .about-details span {
+    font-size: 10px;
   }
 
   .about-details strong {
     font-size: 12px;
   }
 
-  /* About page statistics */
+  /* Statistics: two compact columns */
 
   .stats-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 11px;
+    gap: 10px;
   }
 
   .stat-card {
-    padding: 16px 10px;
+    padding: 15px 9px;
   }
 
   .stat-card h3 {
@@ -880,15 +898,15 @@ footer,
     font-size: 11px;
   }
 
-  /* Professional approach */
+  /* Approach cards */
 
   .cards-grid {
     grid-template-columns: 1fr;
-    gap: 11px;
+    gap: 10px;
   }
 
   .info-card {
-    padding: 17px;
+    padding: 16px;
   }
 
   .info-card h3 {
@@ -902,16 +920,15 @@ footer,
 
   /* Other pages */
 
-  .about-highlights,
   .skills-grid,
   .projects-grid,
   .contact-grid {
     grid-template-columns: 1fr;
-    gap: 15px;
+    gap: 13px;
   }
 
   .card {
-    padding: 18px;
+    padding: 17px;
   }
 
   .timeline {
@@ -924,30 +941,21 @@ footer,
 
   footer,
   .footer {
-    padding: 18px 12px;
+    padding: 17px 12px;
     font-size: 11px;
   }
 }
 
-/* 19. SMALL MOBILE DEVICES */
+/* VERY SMALL PHONES */
 
 @media (max-width: 380px) {
-
   .hero h1 {
     font-size: 33px;
-  }
-
-  .logo span {
-    font-size: 11px;
   }
 
   .hero-actions {
     flex-direction: column;
     align-items: stretch;
-  }
-
-  .statistics {
-    gap: 12px;
   }
 
   .about-details {
@@ -956,11 +964,11 @@ footer,
 
   .section-heading h1,
   .section-heading h2 {
-    font-size: 26px;
+    font-size: 25px;
   }
 }
 
-/* 20. KEYBOARD ACCESSIBILITY */
+/* KEYBOARD ACCESSIBILITY */
 
 a:focus-visible,
 button:focus-visible,
