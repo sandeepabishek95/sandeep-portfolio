@@ -4,48 +4,69 @@
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    // 1. MOBILE NAVIGATION
     const menuToggle = document.getElementById("menuToggle");
     const navigation = document.getElementById("navigation");
 
+    // MOBILE NAVIGATION
+
+    function closeMenu() {
+        if (!menuToggle || !navigation) return;
+
+        navigation.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.textContent = "☰";
+    }
+
     if (menuToggle && navigation) {
 
-        // Open and close mobile menu
         menuToggle.addEventListener("click", function () {
 
             const isOpen = navigation.classList.toggle("open");
 
-            menuToggle.setAttribute("aria-expanded", isOpen);
-
+            menuToggle.setAttribute("aria-expanded", String(isOpen));
             menuToggle.textContent = isOpen ? "✕" : "☰";
 
         });
 
-        // Close menu when a link is selected
-        const navLinks = navigation.querySelectorAll("a");
+        // Close menu after selecting a link
 
-        navLinks.forEach(function (link) {
+        navigation.querySelectorAll("a").forEach(function (link) {
 
-            link.addEventListener("click", function () {
+            link.addEventListener("click", closeMenu);
 
-                navigation.classList.remove("open");
+        });
 
-                menuToggle.setAttribute("aria-expanded", "false");
+        // Close menu when clicking outside
 
-                menuToggle.textContent = "☰";
+        document.addEventListener("click", function (event) {
 
-            });
+            if (
+                !navigation.contains(event.target) &&
+                !menuToggle.contains(event.target)
+            ) {
+                closeMenu();
+            }
+
+        });
+
+        // Close menu when switching to desktop width
+
+        window.addEventListener("resize", function () {
+
+            if (window.innerWidth > 650) {
+                closeMenu();
+            }
 
         });
 
     }
 
-    // 2. HIGHLIGHT CURRENT PAGE
-    const currentPage = window.location.pathname.split("/").pop() || "index.html";
+    // ACTIVE NAVIGATION LINK
 
-    const allLinks = document.querySelectorAll(".navigation a");
+    const currentPage =
+        window.location.pathname.split("/").pop() || "index.html";
 
-    allLinks.forEach(function (link) {
+    document.querySelectorAll(".navigation a").forEach(function (link) {
 
         const linkPage = link.getAttribute("href");
 
@@ -57,27 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     });
 
-    // 3. CLOSE MENU WHEN CLICKING OUTSIDE
-    document.addEventListener("click", function (event) {
+    // AUTOMATIC FOOTER YEAR
 
-        if (
-            menuToggle &&
-            navigation &&
-            !navigation.contains(event.target) &&
-            !menuToggle.contains(event.target)
-        ) {
-
-            navigation.classList.remove("open");
-
-            menuToggle.setAttribute("aria-expanded", "false");
-
-            menuToggle.textContent = "☰";
-
-        }
-
-    });
-
-    // 4. FOOTER YEAR
     const yearElement = document.getElementById("currentYear");
 
     if (yearElement) {
