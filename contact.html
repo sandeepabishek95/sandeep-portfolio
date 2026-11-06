@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080b12">
+    <title>Contact | Sandeep Abishek</title>
+    <meta name="description"
+        content="Contact Sandeep Abishek, IT and Application Support Engineer based in Dubai, UAE.">
+    <link rel="stylesheet" href="css/style.css?v=3">
+    <style>
+        /* Contact page */
+        #contactPage .contact-intro {
+            margin-bottom: 35px;
+        }
+        #contactPage .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.15fr;
+            gap: 25px;
+            align-items: start;
+        }
+        #contactPage .contact-card {
+            padding: 25px;
+            border: 1px solid rgba(56, 170, 255, 0.35);
+            border-radius: 18px;
+            background: linear-gradient(
+                145deg,
+                rgba(20, 34, 51, 0.9),
+                rgba(8, 15, 26, 0.95)
+            );
+        }
+        #contactPage .contact-card h2 {
+            color: var(--gold);
+            font-size: 21px;
+            margin-bottom: 20px;
+        }
+        /* Contact information */
+        #contactPage .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 15px 0;
+            border-bottom: 1px solid rgba(170, 180, 194, 0.13);
+        }
+        #contactPage .contact-item:last-child {
+            border-bottom: none;
+        }
+        #contactPage .contact-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            width: 43px;
+            height: 43px;
+            border-radius: 12px;
+            background: rgba(232, 197, 138, 0.1);
+            color: var(--gold);
+            font-size: 19px;
+        }
+        #contactPage .contact-info {
+            min-width: 0;
+        }
+        #contactPage .contact-info strong {
+            display: block;
+            color: var(--white);
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+        #contactPage .contact-info a {
+            color: var(--muted);
+            font-size: 13px;
+            text-decoration: none;
+            overflow-wrap: anywhere;
+        }
+        #contactPage .contact-info a:hover {
+            color: var(--gold);
+        }
+        /* Social links */
+        #contactPage .social-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 12px;
+            margin-top: 22px;
+        }
+        #contactPage .social-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 9px;
+            padding: 17px 8px;
+            border: 1px solid rgba(170, 180, 194, 0.18);
+            border-radius: 13px;
+            text-decoration: none;
+            color: var(--white);
+            background: rgba(17, 28, 42, 0.6);
+            transition: 0.25s ease;
+        }
+        #contactPage .social-link:hover {
+            border-color: var(--gold);
+            transform: translateY(-3px);
+        }
+        #contactPage .social-symbol {
+            color: var(--gold);
+            font-size: 23px;
+            font-weight: 800;
+        }
+        #contactPage .social-link span:last-child {
+            font-size: 12px;
+        }
+        /* Message form */
+        #contactPage .form-group {
+            margin-bottom: 18px;
+        }
+        #contactPage .form-group label {
+            display: block;
+            color: var(--white);
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 9px;
+        }
+        #contactPage .form-group input,
+        #contactPage .form-group select,
+        #contactPage .form-group textarea {
+            width: 100%;
+            box-sizing: border-box;
+            padding: 13px 14px;
+            color: var(--white);
+            background: #0b1421;
+            border: 1px solid rgba(170, 180, 194, 0.3);
+            border-radius: 9px;
+            font-family: inherit;
+            font-size: 14px;
+            outline: none;
+        }
+        #contactPage .form-group input:focus,
+        #contactPage .form-group select:focus,
+        #contactPage .form-group textarea:focus {
+            border-color: var(--gold);
+        }
+        #contactPage .form-group select option {
+            background: #101722;
+            color: var(--white);
+        }
+        #contactPage .form-group textarea {
+            min-height: 125px;
+            resize: vertical;
+        }
+        #contactPage .send-button {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            color: #101722;
+            background: var(--gold);
+            border: none;
+            border-radius: 9px;
+            font-size: 15px;
+            font-weight: 800;
+            cursor: pointer;
+            transition: 0.25s ease;
+        }
+        #contactPage .send-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(232, 197, 138, 0.2);
+        }
+        #contactPage .form-note {
+            color: var(--muted);
+            font-size: 12px;
+            line-height: 1.6;
+            margin-top: 13px;
+        }
+        #contactPage .location-card {
+            margin-top: 22px;
+            padding: 18px;
+            border-radius: 13px;
+            background: rgba(56, 170, 255, 0.07);
+            border: 1px solid rgba(56, 170, 255, 0.2);
+            color: var(--muted);
+            font-size: 14px;
+        }
+        #contactPage .location-card strong {
+            color: var(--gold);
+        }
+        @media (max-width: 800px) {
+            #contactPage .contact-layout {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 650px) {
+            #contactPage .contact-card {
+                padding: 21px;
+            }
+            #contactPage .social-grid {
+                gap: 8px;
+            }
+            #contactPage .social-link {
+                padding: 14px 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="index.html" class="logo">SA<span>.</span></a>
+            <button class="menu-toggle" id="menuToggle"
+                aria-label="Toggle navigation"
+                aria-expanded="false">
+                ☰
+            </button>
+            <nav class="navigation" id="navigation">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="skills.html">Skills</a>
+                <a href="experience.html">Experience</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html" class="active">Contact</a>
+                <a href="Sandeep-Abishek-CV.pdf"
+                    class="resume-btn" download>
+                    Download CV ↓
+                </a>
+            </nav>
+        </div>
+    </header>
+    <main id="contactPage">
+        <section class="page-section">
+            <!-- Introduction -->
+            <div class="contact-intro">
+                <span class="section-tag">LET'S CONNECT</span>
+                <h1>Get In <span>Touch</span></h1>
+                <p class="section-description">
+                    Interested in discussing an opportunity,
+                    collaboration, or professional enquiry?
+                    Feel free to reach out using any of the
+                    contact options below.
+                </p>
+            </div>
+            <div class="contact-layout">
+                <!-- Contact Information -->
+                <div class="contact-card">
+                    <h2>Contact Information</h2>
+                    <div class="contact-item">
+                        <div class="contact-icon">✉</div>
+                        <div class="contact-info">
+                            <strong>Email</strong>
+                            <a href="mailto:sandeepabishek95@gmail.com">
+                                sandeepabishek95@gmail.com
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">☎</div>
+                        <div class="contact-info">
+                            <strong>UAE WhatsApp</strong>
+                            <a href="https://wa.me/971582315505"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                +971 58 231 5505
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">☎</div>
+                        <div class="contact-info">
+                            <strong>India WhatsApp (Alternative)</strong>
+                            <a href="https://wa.me/917358734194"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                +91 7358734194
+                            </a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">⌖</div>
+                        <div class="contact-info">
+                            <strong>Location</strong>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Dubai+UAE"
+                                target="_blank"
+                                rel="noopener noreferrer">
+                                Dubai, United Arab Emirates
+                            </a>
+                        </div>
+                    </div>
+                    <!-- Social Media -->
+                    <h2 style="margin-top: 25px;">
+                        Connect With Me
+                    </h2>
+                    <div class="social-grid">
+                        <a class="social-link"
+                            href="https://www.linkedin.com/in/sandeep-abishek-3b073719b"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="social-symbol">in</span>
+                            <span>LinkedIn</span>
+                        </a>
+                        <a class="social-link"
+                            href="https://www.facebook.com/share/1CE82DA9eS/?mibextid=wwXIfr"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="social-symbol">f</span>
+                            <span>Facebook</span>
+                        </a>
+                        <a class="social-link"
+                            href="https://www.instagram.com/rockyboysandy/"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <span class="social-symbol">◎</span>
+                            <span>Instagram</span>
+                        </a>
+                    </div>
+                    <div class="location-card">
+                        <strong>Professional Location</strong>
+                        <p style="margin-top: 7px;">
+                            Currently based in Dubai, UAE.
+                            Open to IT Support, Application Support,
+                            and Production Support opportunities.
+                        </p>
+                    </div>
+                </div>
+                <!-- Interactive Message Form -->
+                <div class="contact-card">
+                    <h2>Send Me a Message</h2>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="visitorName">
+                                Your Name
+                            </label>
+                            <input
+                                type="text"
+                                id="visitorName"
+                                placeholder="Enter your name"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visitorEmail">
+                                Your Email Address
+                            </label>
+                            <input
+                                type="email"
+                                id="visitorEmail"
+                                placeholder="Enter your email address"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="contactMethod">
+                                Choose Contact Method
+                            </label>
+                            <select id="contactMethod" required>
+                                <option value="email">
+                                    Send Email
+                                </option>
+                                <option value="whatsapp">
+                                    Send WhatsApp Message
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group"
+                            id="whatsappChoice"
+                            style="display: none;">
+                            <label for="whatsappNumber">
+                                Select WhatsApp Number
+                            </label>
+                            <select id="whatsappNumber">
+                                <option value="971582315505">
+                                    UAE - +971 58 231 5505
+                                </option>
+                                <option value="917358734194">
+                                    India - +91 7358734194
+                                </option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="messageSubject">
+                                Subject
+                            </label>
+                            <input
+                                type="text"
+                                id="messageSubject"
+                                placeholder="Enter message subject"
+                                required>
+                        </div>
+                        <div class="form-group">
+                            <label for="visitorMessage">
+                                Your Message
+                            </label>
+                            <textarea
+                                id="visitorMessage"
+                                placeholder="Write your message here..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="send-button">
+                            Continue to Send →
+                        </button>
+                        <p class="form-note">
+                            Your message will open in your selected
+                            email application or WhatsApp. Nothing is
+                            submitted to a website server.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer">
+        <p>
+            © <span id="currentYear"></span>
+            Sandeep Abishek. All rights reserved.
+        </p>
+    </footer>
+    <!-- Contact Form Script -->
+    <script src="js/script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactMethod =
+                document.getElementById("contactMethod");
+            const whatsappChoice =
+                document.getElementById("whatsappChoice");
+            const contactForm =
+                document.getElementById("contactForm");
+            // Show WhatsApp number dropdown when selected
+            contactMethod.addEventListener("change", function () {
+                whatsappChoice.style.display =
+                    this.value === "whatsapp" ? "block" : "none";
+            });
+            // Handle message submission
+            contactForm.addEventListener("submit", function (event) {
+                event.preventDefault();
+                const name =
+                    document.getElementById("visitorName").value.trim();
+                const email =
+                    document.getElementById("visitorEmail").value.trim();
+                const subject =
+                    document.getElementById("messageSubject").value.trim();
+                const message =
+                    document.getElementById("visitorMessage").value.trim();
+                const method = contactMethod.value;
+                if (method === "email") {
+                    const emailSubject =
+                        encodeURIComponent(subject);
+                    const emailBody =
+                        encodeURIComponent(
+                            "Hello Sandeep,\n\n" +
+                            message +
+                            "\n\nRegards,\n" +
+                            name +
+                            "\nEmail: " + email
+                        );
+                    const emailURL =
+                        "mailto:sandeepabishek95@gmail.com" +
+                        "?subject=" + emailSubject +
+                        "&body=" + emailBody;
+                    window.location.href = emailURL;
+                }
+                else if (method === "whatsapp") {
+                    const number =
+                        document.getElementById("whatsappNumber").value;
+                    const whatsappMessage =
+                        encodeURIComponent(
+                            "Hello Sandeep,\n\n" +
+                            "My name is " + name + ".\n" +
+                            "Email: " + email + "\n\n" +
+                            "Subject: " + subject + "\n\n" +
+                            message
+                        );
+                    const whatsappURL =
+                        "https://wa.me/" + number +
+                        "?text=" + whatsappMessage;
+                    window.open(
+                        whatsappURL,
+                        "_blank",
+                        "noopener,noreferrer"
+                    );
+                }
+            });
+        });
+    </script>
+</body>
+</html>
